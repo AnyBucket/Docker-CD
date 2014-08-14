@@ -1,6 +1,6 @@
 .PHONY: build shell
 
-DOCKER_IMAGE := cloudaku/docker-cd
+DOCKER_IMAGE := cloudaku/docker-cd:v1
 
 build:
 	docker build -t "$(DOCKER_IMAGE)" .
