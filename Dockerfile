@@ -1,4 +1,4 @@
-FROM cloudaku/doubledocker
+FROM cloudaku/dockerfile-doubledocker
 
 cloudaku <devops@hostname.io>
 
