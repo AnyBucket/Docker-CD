@@ -1,9 +1,14 @@
-FROM cloudaku/docker-cd
-MAINTAINER Cloudaku <devops@hostname.io>
+FROM mattgruter/doubledocker
 
-RUN cd /tmp && \
-    wget http://downloads.drone.io/latest/drone.deb && \
-    dpkg -i drone.deb
+MAINTAINER Matthias Grüter <matthias@grueter.name>
 
-EXPOSE 8080
-CMD ["droned"]
+RUN apt-get -y install htop
+RUN apt-get -y install wget
+RUN wget http://downloads.drone.io/latest/drone.deb
+RUN dpkg -i drone.deb
+
+EXPOSE 80
+
+VOLUME /var/lib/drone
+
+CMD /etc/init.d/docker start && /usr/local/bin/droned --port=:80 --datasource=/var/lib/drone/drone.sqlite
