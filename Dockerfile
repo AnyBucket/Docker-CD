@@ -1,6 +1,6 @@
-FROM mattgruter/doubledocker
+FROM cloudaku/docker-cd
 
-MAINTAINER Matthias Grüter <matthias@grueter.name>
+cloudaku <devops@hostname.io>
 
 RUN apt-get -y install htop
 RUN apt-get -y install wget
