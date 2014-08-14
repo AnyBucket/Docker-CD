@@ -1,6 +1,6 @@
 .PHONY: build shell
 
-DOCKER_IMAGE := smartprocure/drone
+DOCKER_IMAGE := cloudaku/docker-cd
 
 build:
 	docker build -t "$(DOCKER_IMAGE)" .

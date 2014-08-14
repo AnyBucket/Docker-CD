@@ -1,4 +1,4 @@
-FROM smartprocure/base
+FROM cloudaku/docker-cd
 MAINTAINER Cloudaku <devops@hostname.io>
 
 RUN cd /tmp && \
