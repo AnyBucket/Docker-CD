@@ -1,4 +1,4 @@
-FROM cloudaku/docker-cd
+FROM cloudaku/ubuntu-base
 MAINTAINER Cloudaku <devops@hostname.io>
 
 RUN cd /tmp && \
